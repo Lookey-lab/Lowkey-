@@ -1,0 +1,44 @@
+LOWKEY INSTITUTIONAL LIQUIDITY EA — MT5
+
+Purpose
+This Expert Advisor implements a rules-based, institutional-inspired approach using:
+- Higher-timeframe market-structure break
+- Liquidity sweep / stop-run confirmation
+- Fair Value Gap (FVG) detection
+- Simple order-block confirmation
+- London/New York session filter
+- Spread filter
+- Risk-based position sizing
+- Daily loss limit
+- Maximum trades per day
+- Break-even and trailing management
+- Optional MT5 economic-calendar high-impact-news filter
+
+Important
+No public EA can honestly claim to contain the secret proprietary algorithms of banks or prop firms. This is a systematic approximation of publicly discussed institutional concepts.
+
+Recommended initial test
+- Symbol: XAUUSD
+- Structure TF: H1
+- Entry TF: M15
+- Risk: 0.25–0.50% per trade
+- RR: 2.0–2.5
+- Max trades/day: 2
+- Daily loss limit: 2%
+- Run Strategy Tester with real ticks before demo/live use.
+
+Installation
+1. Open MetaTrader 5.
+2. Press F4 to open MetaEditor.
+3. Create/open an Expert Advisor file named LOWKEY_Institutional_Liquidity_EA.mq5.
+4. Replace its contents with the supplied .mq5 file.
+5. Compile with F7.
+6. In MT5, attach the EA to the desired chart.
+7. Enable Algo Trading.
+8. Backtest first using Strategy Tester and realistic spread/commission settings.
+
+Notes
+- Session hours are broker/server time and must be adjusted for the broker.
+- Gold point size and spread vary by broker.
+- The news filter is OFF by default because calendar coverage can vary by broker.
+- The strategy is intentionally selective: all major confirmations must align before an entry.
